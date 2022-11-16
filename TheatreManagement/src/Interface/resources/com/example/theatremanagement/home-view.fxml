@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.theatremanagement.HomeController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Navigate">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#navigateTicket" text="Ticketing" />
+                  <MenuItem mnemonicParsing="false" text="Employee" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Quit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#navigateTicket" prefHeight="25.0" prefWidth="75.0" text="Ticketing" />
+   </children>
+</AnchorPane>
