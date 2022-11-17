@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import sqlconnector.DBInitializer;
+import sqlconnector.DBInsertor;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -21,6 +22,7 @@ public class ApplicationRoot extends Application
         stage.show();
 
 
+
     }
 
     public static void main(String[] args) throws SQLException
@@ -28,6 +30,11 @@ public class ApplicationRoot extends Application
         DBInitializer initializer = new DBInitializer();
         initializer.Connect();
         initializer.RetrieveRecords("customer");
-        launch();
+
+        DBInsertor insertor = new DBInsertor();
+
+        insertor.insertRecords();
+
+//        launch();
     }
 }

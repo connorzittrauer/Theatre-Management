@@ -28,6 +28,7 @@ public class TicketController
     public void printField(ActionEvent event)
     {
         System.out.println(TicketNO.getText());
+        TicketNO.clear();
     }
 
 

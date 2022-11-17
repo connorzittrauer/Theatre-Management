@@ -15,10 +15,11 @@ public class DBInsertor {
     DBInitializer initializer = new DBInitializer();
     Connection dbconn;
 
-    public void insert_records() throws SQLException
+    public void insertRecords() throws SQLException
     {
            dbconn = initializer.Connect();
            insertData();
+            //some change
     }
     
 
@@ -26,39 +27,42 @@ public class DBInsertor {
     public void insertData ()  throws SQLException
     {
 
-//        Scanner input = new Scanner(System.in);
-//        int empssn,superssn;
-//        double empsalary;
-//        String empfname, emplname;
-//
-//        //input data for insertion
-//        System.out.print("Enter Employee SSN:");
-//        empssn= input.nextInt();
-//        System.out.print("Enter Employee's Firstname:");
-//        empfname= input.next();
-//        System.out.print("Enter Employee's Lastname:");
-//        emplname= input.next();
-//        System.out.print("Enter Employee's Supervisor's SSN:");
-//        superssn= input.nextInt();
-//        System.out.print("Enter Employee's Salary:");
-//        empsalary= input.nextDouble();
+        Scanner input = new Scanner(System.in);
+        int HallNO,MaxSeats, IMax;
 
-//        try
-//        {
-//        //insert data into a table of a database/schema
-//        Connection conn= dbconn;
-//        String insertq= "insert into employee(employee_ssn,employee_firstname,employee_lastname,employee_salary,supervisor_ssn) values ('"+empssn+ "','"+empfname+"','"+emplname+ "','"+empsalary+ "', '"+superssn+"')";
-//        PreparedStatement insertst = conn.prepareStatement(insertq);
-//        insertst.executeUpdate();
-//        }
-//         catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
-//        finally
-//        {
-//            System.out.println("The record has been inserted!");
-//        }
+        //input data for insertion
+        System.out.print("HallNO:");
+        HallNO= input.nextInt();
+        System.out.print("MaxSeats:");
+        MaxSeats= input.nextInt();
+        System.out.print("Imax?:");
+        IMax= input.nextInt();
+
+
+        try
+        {
+        //insert data into a table of a database/schema
+        Connection conn= dbconn;
+//        String insertq= "insert into ticket(TicketNO,HallNO,EmployeeID,Title, SaleDate, SeatNO, Price, Discount) values " +
+//                "('"+TicketNO+"',' "+HallNO+" ',' "+EmployeeID+" ',' "+Title+" ',' "+SaleDate+" ',' "+SeatNO+" ',' )";
+
+//            String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
+//                    "('"+HallNO+" ',' "+MaxSeats+"' ',' "+IMax+"')";
+//
+
+         String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
+                 "('"+HallNO+ "','"+MaxSeats+"','"+IMax+"')";
+        PreparedStatement insertst = conn.prepareStatement(insertq);
+        insertst.executeUpdate();
+        }
+         catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            System.out.println("The record has been inserted!");
+        }
 //
         
     }
