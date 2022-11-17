@@ -31,6 +31,10 @@ public class TicketController
         TicketNO.clear();
     }
 
+    public void insertTicket(){
+
+    }
+
 
 
 }

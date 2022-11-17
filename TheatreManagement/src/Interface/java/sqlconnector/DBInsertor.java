@@ -29,13 +29,15 @@ public class DBInsertor {
 
         Scanner input = new Scanner(System.in);
         int HallNO,MaxSeats, IMax;
+        String Title;
+
 
         //input data for insertion
-        System.out.print("HallNO:");
+        System.out.print("TicketNO:");
         HallNO= input.nextInt();
-        System.out.print("MaxSeats:");
+        System.out.print("HallNO:");
         MaxSeats= input.nextInt();
-        System.out.print("Imax?:");
+        System.out.print("EmployeeID:");
         IMax= input.nextInt();
 
 
@@ -50,9 +52,17 @@ public class DBInsertor {
 //                    "('"+HallNO+" ',' "+MaxSeats+"' ',' "+IMax+"')";
 //
 
-         String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
+                     String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
                  "('"+HallNO+ "','"+MaxSeats+"','"+IMax+"')";
         PreparedStatement insertst = conn.prepareStatement(insertq);
+
+
+
+//         String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
+//                 "('"+HallNO+ "','"+MaxSeats+"','"+IMax+"')";
+//        PreparedStatement insertst = conn.prepareStatement(insertq);
+
+
         insertst.executeUpdate();
         }
          catch (Exception e)
