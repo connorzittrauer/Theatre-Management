@@ -12,9 +12,9 @@ import java.util.*;
  * @author talam
  */
 public class DBInsertor {
-    DBInitializer initializer = new DBInitializer();
-    Connection dbconn;
 
+    Connection dbconn;
+    DBInitializer initializer = new DBInitializer();
     public void insertRecords() throws SQLException
     {
            dbconn = initializer.Connect();
@@ -28,42 +28,35 @@ public class DBInsertor {
     {
 
         Scanner input = new Scanner(System.in);
-        int HallNO,MaxSeats, IMax;
+        int HallNO=12,MaxSeats=400, IMax=0;
         String Title;
 
 
         //input data for insertion
-        System.out.print("TicketNO:");
-        HallNO= input.nextInt();
-        System.out.print("HallNO:");
-        MaxSeats= input.nextInt();
-        System.out.print("EmployeeID:");
-        IMax= input.nextInt();
-
+//        System.out.print("TicketNO:");
+//        HallNO= input.nextInt();
+//        System.out.print("HallNO:");
+//        MaxSeats= input.nextInt();
+//        System.out.print("EmployeeID:");
+//        IMax= input.nextInt();
+//        ArrayList<Object> rows = new ArrayList<>();
 
         try
         {
-        //insert data into a table of a database/schema
-        Connection conn= dbconn;
-//        String insertq= "insert into ticket(TicketNO,HallNO,EmployeeID,Title, SaleDate, SeatNO, Price, Discount) values " +
-//                "('"+TicketNO+"',' "+HallNO+" ',' "+EmployeeID+" ',' "+Title+" ',' "+SaleDate+" ',' "+SeatNO+" ',' )";
 
-//            String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
-//                    "('"+HallNO+" ',' "+MaxSeats+"' ',' "+IMax+"')";
-//
-
-                     String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
-                 "('"+HallNO+ "','"+MaxSeats+"','"+IMax+"')";
-        PreparedStatement insertst = conn.prepareStatement(insertq);
-
-
-
-//         String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMax) values " +
-//                 "('"+HallNO+ "','"+MaxSeats+"','"+IMax+"')";
+            //THIS BLOCK WORKS
+//        Connection conn= dbconn;
+//        String insertq= "insert into theatre_hall(HallNO,MaxSeats,IMAX) values (' " +
+//               ""+HallNO+" ',' " +
+//               ""+MaxSeats+" ',' " +
+//               ""+IMax+" ')";
 //        PreparedStatement insertst = conn.prepareStatement(insertq);
+//        insertst.executeUpdate();
 
 
-        insertst.executeUpdate();
+
+
+
         }
          catch (Exception e)
         {

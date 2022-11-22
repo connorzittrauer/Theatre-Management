@@ -38,6 +38,7 @@ public class HomeController
         stage.setScene(scene);
         stage.show();
 
-        System.out.println("switched?");
+
+
     }
 }

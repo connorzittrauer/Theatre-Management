@@ -20,38 +20,38 @@
             <Font name="Barlow Condensed Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="26.0" layoutY="143.0" />
+      <TextField id="HallNO" fx:id="HallNO" layoutX="26.0" layoutY="143.0" />
       <Label layoutX="26.0" layoutY="177.0" prefHeight="23.0" prefWidth="108.0" text="EmployeeID">
          <font>
             <Font name="Barlow Condensed Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="26.0" layoutY="200.0" />
+      <TextField text="827108436" id="EmployeeID" fx:id="EmployeeID" layoutX="26.0" layoutY="200.0" />
       <Label layoutX="235.0" layoutY="64.0" prefHeight="23.0" prefWidth="108.0" text="Title">
          <font>
             <Font name="Barlow Condensed Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="235.0" layoutY="87.0" />
+      <TextField id="Title" fx:id="Title" layoutX="235.0" layoutY="87.0" />
       <Label layoutX="235.0" layoutY="120.0" prefHeight="23.0" prefWidth="108.0" text="Sale Date">
          <font>
             <Font name="Barlow Condensed Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="235.0" layoutY="142.0" />
+      <TextField id="SaleDate" fx:id="SaleDate" layoutX="235.0" layoutY="142.0" />
       <Label layoutX="235.0" layoutY="177.0" prefHeight="23.0" prefWidth="108.0" text="SeatNO">
          <font>
             <Font name="Barlow Condensed Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="235.0" layoutY="199.0" />
+      <TextField id="SeatNO" fx:id="SeatNO" layoutX="235.0" layoutY="199.0" />
       <Label layoutX="235.0" layoutY="241.0" prefHeight="23.0" prefWidth="108.0" text="Price">
          <font>
             <Font name="Barlow Condensed Regular" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="235.0" layoutY="263.0" />
-      <RadioButton layoutX="408.0" layoutY="267.0" mnemonicParsing="false" text="Discount" />
-      <Button onAction="#printField" layoutX="263.0" layoutY="338.0" mnemonicParsing="false" text="Submit" />
+      <TextField id="Price" fx:id="Price" layoutX="235.0" layoutY="263.0" />
+      <RadioButton id="Discount" fx:id="DiscountButton" layoutX="408.0" layoutY="267.0" mnemonicParsing="false" text="Discount" />
+      <Button onAction="#insertTicket" layoutX="263.0" layoutY="338.0" mnemonicParsing="false" text="Submit" />
    </children>
 </AnchorPane>

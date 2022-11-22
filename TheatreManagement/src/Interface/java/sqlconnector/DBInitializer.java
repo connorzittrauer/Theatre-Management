@@ -7,7 +7,6 @@ import java.sql.*;
 
 public class DBInitializer
 {
-//    Boolean connected = false;
     Connection dbconn = null;
     public Connection Connect() throws SQLException
     {
@@ -20,11 +19,10 @@ public class DBInitializer
             //Step 1: Connection to a database
             dbconn = DriverManager.getConnection(url, username, password);
             System.out.println("Database connection was successful!");
-//            connected = true;
+
         }
         catch (Exception e)
         {
-//            connected = false;
             e.printStackTrace();
         }
 

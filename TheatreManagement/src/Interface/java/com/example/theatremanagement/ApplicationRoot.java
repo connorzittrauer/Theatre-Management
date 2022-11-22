@@ -31,10 +31,13 @@ public class ApplicationRoot extends Application
         initializer.Connect();
         initializer.RetrieveRecords("customer");
 
-        DBInsertor insertor = new DBInsertor();
+//        DBInsertor insertor = new DBInsertor();
+//
+//        insertor.insertRecords();
 
-        insertor.insertRecords();
 
-//        launch();
+
+
+        launch();
     }
 }
