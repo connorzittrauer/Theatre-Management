@@ -2,6 +2,7 @@ package com.example.theatremanagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
@@ -32,7 +33,10 @@ public class TicketController
     public void navigateHome(ActionEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(ApplicationRoot.class.getResource("home-view.fxml"));
-
+        Scene scene = new Scene(fxmlLoader.load());
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void insertTicket() throws SQLException {
