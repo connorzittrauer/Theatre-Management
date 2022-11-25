@@ -32,7 +32,7 @@ public class DBInitializer
 
     }
 
-    public ArrayList<String> RetrieveShowtimes(String table) throws SQLException
+    public ArrayList<String> RetrieveFilms(String table) throws SQLException
     {
 
         Statement statement = null;
@@ -43,7 +43,7 @@ public class DBInitializer
 
         //Step 3: Run a SQL query
         //rs = statement.executeQuery("select * from " + table);
-        rs = statement.executeQuery("SELECT CONCAT(filmid, ' ' ,timeslot) AS 'Rows' from showtimes");
+        rs = statement.executeQuery("SELECT CONCAT(filmid, ' ' ,title, ' ', rating, ' ', runtime) AS 'Rows' from film");
 
         //Step 4: Output the retrieved data /result set
         ResultSetMetaData rsmd = rs.getMetaData();

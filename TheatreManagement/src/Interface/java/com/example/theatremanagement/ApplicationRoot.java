@@ -27,9 +27,6 @@ public class ApplicationRoot extends Application
 
     public static void main(String[] args) throws SQLException
     {
-        DBInitializer initializer = new DBInitializer();
-        initializer.Connect();
-
         launch();
     }
 }

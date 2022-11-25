@@ -6,8 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,9 +28,9 @@ public class HomeController
 
     }
     @FXML
-    protected void navigateShowtimes(ActionEvent event) throws IOException
+    protected void navigateFilms(ActionEvent event) throws IOException
     {
-        FXMLLoader fxmlLoader = new FXMLLoader(ApplicationRoot.class.getResource("employee-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ApplicationRoot.class.getResource("films-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
