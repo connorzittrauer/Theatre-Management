@@ -36,6 +36,6 @@
             <Font name="Barlow Condensed Regular" size="52.0" />
          </font>
       </Label>
-      <Button layoutX="305.0" layoutY="240.0" mnemonicParsing="false" text="Employee Portal" />
+      <Button onAction="#navigateShowtimes" layoutX="305.0" layoutY="240.0" mnemonicParsing="false" text="Showtimes" />
    </children>
 </AnchorPane>

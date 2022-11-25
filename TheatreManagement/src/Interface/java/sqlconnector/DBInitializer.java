@@ -4,10 +4,12 @@
  */
 package sqlconnector;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DBInitializer
 {
     Connection dbconn = null;
+
     public Connection Connect() throws SQLException
     {
         final String username = "root";
@@ -20,8 +22,7 @@ public class DBInitializer
             dbconn = DriverManager.getConnection(url, username, password);
             System.out.println("Database connection was successful!");
 
-        }
-        catch (Exception e)
+        } catch (Exception e)
         {
             e.printStackTrace();
         }
@@ -29,33 +30,55 @@ public class DBInitializer
         return dbconn;
 
 
-
     }
 
-    public void RetrieveRecords(String table) throws SQLException {
+    public ArrayList<String> RetrieveShowtimes(String table) throws SQLException
+    {
 
         Statement statement = null;
         ResultSet rs = null;
-
+        ArrayList<String> rows = new ArrayList<>();
         //Step 2: Create a statement
         statement = dbconn.createStatement();
 
         //Step 3: Run a SQL query
-        rs = statement.executeQuery("select * from " + table);
+        //rs = statement.executeQuery("select * from " + table);
+        rs = statement.executeQuery("SELECT CONCAT(filmid, ' ' ,timeslot) AS 'Rows' from showtimes");
 
         //Step 4: Output the retrieved data /result set
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnsNumber = rsmd.getColumnCount();
+        System.out.println(columnsNumber);
 
-        while (rs.next()) {
-            for(int i = 1; i < columnsNumber; i++)
-                System.out.print(rs.getString(i) + " ");
-            System.out.println();
+        while (rs.next())
+        {
+            for (int i = 1; i <= columnsNumber; i++)
+            {
+//                System.out.print(rs.getString(i));
+                rows.add(rs.getString(i));
+
             }
-          }
 
+
+//        while (rs.next())
+//        {
+//            for (int i = 1; i <= columnsNumber; i++)
+//                System.out.print(rs.getString(i));
+//            System.out.println();
+//        }
+
+//        while (rs.next()) {
+//            for(int i = 1; i <= columnsNumber; i++)
+//                rows.add((rs.getString(i)));
+//        }
+//            return rows;
+//        }
+
+
+
+        }
+        return rows;
     }
-
-
+}
 
 

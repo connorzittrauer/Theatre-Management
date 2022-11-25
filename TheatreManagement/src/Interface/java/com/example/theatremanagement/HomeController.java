@@ -28,6 +28,14 @@ public class HomeController
         stage.setScene(scene);
         stage.show();
 
-
+    }
+    @FXML
+    protected void navigateShowtimes(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(ApplicationRoot.class.getResource("employee-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }
