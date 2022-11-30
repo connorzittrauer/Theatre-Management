@@ -1,5 +1,6 @@
-package com.example.theatremanagement;
+package com.example.theatremanagement.controllers;
 
+import com.example.theatremanagement.ApplicationRoot;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

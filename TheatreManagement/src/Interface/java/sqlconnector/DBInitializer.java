@@ -34,7 +34,6 @@ public class DBInitializer
 
     public ArrayList<String> RetrieveFilms() throws SQLException
     {
-
         Statement statement = null;
         ResultSet rs = null;
         ArrayList<String> rows = new ArrayList<>();
@@ -42,7 +41,6 @@ public class DBInitializer
         statement = dbconn.createStatement();
 
         //Step 3: Run a SQL query
-        //rs = statement.executeQuery("select * from " + table);
         rs = statement.executeQuery("SELECT CONCAT(filmid, ' ' ,title, ' ', rating, ' ', runtime) AS 'Rows' from film");
 
         //Step 4: Output the retrieved data /result set
@@ -54,28 +52,37 @@ public class DBInitializer
         {
             for (int i = 1; i <= columnsNumber; i++)
             {
-//                System.out.print(rs.getString(i));
                 rows.add(rs.getString(i));
-
             }
+        }
+        return rows;
+    }
 
+    public ArrayList<String> RetrieveTickets() throws SQLException
+    {
+        Statement statement = null;
+        ResultSet rs = null;
+        ArrayList<String> rows = new ArrayList<>();
+        //Step 2: Create a statement
+        statement = dbconn.createStatement();
 
-//        while (rs.next())
-//        {
-//            for (int i = 1; i <= columnsNumber; i++)
-//                System.out.print(rs.getString(i));
-//            System.out.println();
-//        }
+        //Step 3: Run a SQL query
+        rs = statement.executeQuery("SELECT CONCAT(" +
+                "ticketno, ' ' ,hallno, ' ',employeeid, ' '," +
+                "title, ' ',saledate, ' ',seatno, ' ', price) " +
+                "AS 'Rows' from ticket");
 
-//        while (rs.next()) {
-//            for(int i = 1; i <= columnsNumber; i++)
-//                rows.add((rs.getString(i)));
-//        }
-//            return rows;
-//        }
+        //Step 4: Output the retrieved data /result set
+        ResultSetMetaData rsmd = rs.getMetaData();
+        int columnsNumber = rsmd.getColumnCount();
+        System.out.println(columnsNumber);
 
-
-
+        while (rs.next())
+        {
+            for (int i = 1; i <= columnsNumber; i++)
+            {
+                rows.add(rs.getString(i));
+            }
         }
         return rows;
     }

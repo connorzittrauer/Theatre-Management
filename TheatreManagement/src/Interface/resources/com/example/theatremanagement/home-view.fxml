@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.theatremanagement.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.theatremanagement.controllers.HomeController">
    <children>
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="Navigate">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#navigateTicket" text="Ticketing" />
+              <MenuItem mnemonicParsing="false" onAction="#navigatePOS" text="Ticketing" />
                   <MenuItem mnemonicParsing="false" text="Employee" />
             </items>
           </Menu>
@@ -25,7 +25,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button layoutX="193.0" layoutY="240.0" mnemonicParsing="false" onAction="#navigateTicket" prefHeight="25.0" prefWidth="75.0" text="Ticketing" />
+      <Button layoutX="174.0" layoutY="240.0" mnemonicParsing="false" onAction="#navigatePOS" prefHeight="25.0" prefWidth="75.0" text="Ticket POS" />
       <Label layoutX="220.0" layoutY="110.0" text="CINE ">
          <font>
             <Font name="Barlow Condensed Regular" size="52.0" />
@@ -36,6 +36,8 @@
             <Font name="Barlow Condensed Regular" size="52.0" />
          </font>
       </Label>
-      <Button layoutX="336.0" layoutY="240.0" mnemonicParsing="false" onAction="#navigateFilms" text="Films" />
+      <Button layoutX="278.0" layoutY="240.0" mnemonicParsing="false" onAction="#navigateFilms" text="Films" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button layoutX="358.0" layoutY="240.0" mnemonicParsing="false" onAction="#navigateInvoices" text="Invoices" />
    </children>
 </AnchorPane>

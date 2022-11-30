@@ -10,4 +10,6 @@ module com.example.theatremanagement {
 
     opens com.example.theatremanagement to javafx.fxml;
     exports com.example.theatremanagement;
+    exports com.example.theatremanagement.controllers;
+    opens com.example.theatremanagement.controllers to javafx.fxml;
 }

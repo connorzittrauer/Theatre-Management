@@ -1,4 +1,5 @@
-package com.example.theatremanagement;
+package com.example.theatremanagement.controllers;
+import com.example.theatremanagement.ApplicationRoot;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +14,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
 
-public class TicketController
+public class POSController
 {
     private Stage stage;
     private Scene scene;
