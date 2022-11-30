@@ -53,7 +53,7 @@ public class FilmsController implements Initializable
 
         try
         {
-           //delete film by FilmID
+           //delete film from database by FilmID
             Connection conn= initializer.Connect();
             String deleteq= "delete from film where FilmID = '"+FilmID+"'";
             PreparedStatement deletest = conn.prepareStatement(deleteq);
@@ -65,7 +65,7 @@ public class FilmsController implements Initializable
         }
         finally
         {
-            //Remove selected film from listview
+            //Remove deleted film from listview
             filmListView.getItems().remove(selectedIndex);
             System.out.println("The record has been deleted!");
         }
@@ -75,11 +75,11 @@ public class FilmsController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        ArrayList<String> showtime_rows;
+        ArrayList<String> film_rows;
         try
         {
             initializer.Connect();
-            showtime_rows = initializer.RetrieveFilms("showtimes");
+            film_rows = initializer.RetrieveFilms();
 
         }
         catch (SQLException e)
@@ -87,7 +87,7 @@ public class FilmsController implements Initializable
             throw new RuntimeException(e);
         }
 
-        filmListView.getItems().addAll(showtime_rows);
+        filmListView.getItems().addAll(film_rows);
     }
 
 }

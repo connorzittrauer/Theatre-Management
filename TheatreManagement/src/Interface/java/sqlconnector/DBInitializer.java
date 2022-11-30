@@ -32,7 +32,7 @@ public class DBInitializer
 
     }
 
-    public ArrayList<String> RetrieveFilms(String table) throws SQLException
+    public ArrayList<String> RetrieveFilms() throws SQLException
     {
 
         Statement statement = null;
