@@ -1,15 +1,11 @@
 package com.example.theatremanagement;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sqlconnector.DBInitializer;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ApplicationRoot extends Application
 {

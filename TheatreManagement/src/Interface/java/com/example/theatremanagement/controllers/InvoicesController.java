@@ -1,5 +1,4 @@
 package com.example.theatremanagement.controllers;
-
 import com.example.theatremanagement.ApplicationRoot;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,8 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sqlconnector.DBInitializer;
-
+import sqlconnector.DBUtils;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -23,7 +21,7 @@ public class InvoicesController implements Initializable
     private Stage stage;
     @FXML
     private AnchorPane root;
-    DBInitializer initializer = new DBInitializer();
+    DBUtils initializer = new DBUtils();
     @FXML
     private ListView<String> ticketListView;
 

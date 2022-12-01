@@ -6,7 +6,7 @@ package sqlconnector;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DBInitializer
+public class DBUtils
 {
     Connection dbconn = null;
 

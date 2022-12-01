@@ -7,13 +7,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
-import sqlconnector.DBInitializer;
+import sqlconnector.DBUtils;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -27,10 +24,28 @@ public class FilmsController implements Initializable
     private Stage stage;
     @FXML
     private AnchorPane root;
-    DBInitializer initializer = new DBInitializer();
+    DBUtils initializer = new DBUtils();
     @FXML
     private ListView<String> filmListView;
 
+    @FXML
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
+        ArrayList<String> film_rows;
+        try
+        {
+            initializer.Connect();
+            film_rows = initializer.RetrieveFilms();
+
+        }
+        catch (SQLException e)
+        {
+            throw new RuntimeException(e);
+        }
+
+        filmListView.getItems().addAll(film_rows);
+    }
     @FXML
     protected void navigateHome(ActionEvent event) throws IOException
     {
@@ -39,7 +54,6 @@ public class FilmsController implements Initializable
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-
 
     }
 
@@ -70,25 +84,6 @@ public class FilmsController implements Initializable
             filmListView.getItems().remove(selectedIndex);
             System.out.println("The record has been deleted!");
         }
-    }
-
-    @FXML
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
-        ArrayList<String> film_rows;
-        try
-        {
-            initializer.Connect();
-            film_rows = initializer.RetrieveFilms();
-
-        }
-        catch (SQLException e)
-        {
-            throw new RuntimeException(e);
-        }
-
-        filmListView.getItems().addAll(film_rows);
     }
 
 }
