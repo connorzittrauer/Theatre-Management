@@ -9,5 +9,8 @@ The MySQL database was normalized to 3N5 and a master script was used to insert 
 
 <h1>Splash Page</h1>
 
-
 ![splash](https://user-images.githubusercontent.com/81932543/211691321-375f1c91-7271-4fb8-9b91-7b3f246e2bba.png)
+
+<h1>Ticket POS</h1>
+
+![ticket-pos](https://user-images.githubusercontent.com/81932543/211691398-5c1c23f4-df0d-4f3e-98d9-6a5751e0e15e.png)
