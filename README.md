@@ -13,4 +13,8 @@ The MySQL database was normalized to 3N5 and a master script was used to insert 
 
 <h1>Ticket POS</h1>
 
-![ticket-pos](https://user-images.githubusercontent.com/81932543/211691398-5c1c23f4-df0d-4f3e-98d9-6a5751e0e15e.png)
+![ticket-pos](https://user-images.githubusercontent.com/81932543/211691868-ab15f8c0-78d5-416c-97d7-28c2dd883d79.png)
+
+<h1>Invoices</h1>
+
+![invoices](https://user-images.githubusercontent.com/81932543/211692008-36ac7ed2-cd92-4d6f-b49d-70e80949dd89.png)
