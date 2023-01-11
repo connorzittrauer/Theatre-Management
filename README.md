@@ -8,5 +8,6 @@ UI components for listing invoices and current films.
 The MySQL database was normalized to 3N5 and a master script was used to insert rows.
 
 <h1>Splash Page</h1>
-![splash](https://user-images.githubusercontent.com/81932543/211690961-96c3f936-89e6-40b3-bb76-6d32c14e2abe.png)
 
+
+![splash](https://user-images.githubusercontent.com/81932543/211691321-375f1c91-7271-4fb8-9b91-7b3f246e2bba.png)
