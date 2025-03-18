@@ -1,11 +1,20 @@
-# Theatre-Management
-This was a final project for CSC 315.
+# Theater Management System
 
-A JavaFX interface was used to mock a theatre management system.
-Tickets were inserted through a POS system to a MySQL database and Java was used to dynamically render JavaFX 
-UI components for listing invoices and current films.
+This project simulates the operations of a theater by integrating a ticket point-of-sale (POS) system using Java, JavaFX, and a MySQL database. The application mocks a theater management system where tickets are inserted through a POS system into a MySQL database that manages ticket points-of-sale and displays invoices.
 
-The MySQL database was normalized to 3N5 and a master script was used to insert rows.
+## Features
+
+- Ticket POS integration that allows for the entry and processing of ticket sales.
+- UI rendering using JavaFX to display current films, invoices, and theater data.
+- Data management using MySQL, with the database schema normalized to Third Normal Form (3NF) for data integrity.
+- A master script provided to automate initial data insertion for testing.
+
+## Technologies Used
+
+- **Java:** Core language for backend processing.
+- **JavaFX:** Framework used for building an interactive user interface.
+- **MySQL:** Relational database used for managing theater data.
+
 
 <h1>Splash Page</h1>
 
